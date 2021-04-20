@@ -1,27 +1,19 @@
-
 class Pila(object):
     
     def __init__(self):
-        self.__elementos = []           # Los dos guiones bajos hacen al atributo privado, y no se le puede acceder a éste desde afuera de la class
+        self.__elementos = []
 
-    def push(self, dato):
+    def apilar(self, dato):
         self.__elementos.append(dato)
 
+    def desapilar(self):
+        return self.__elementos.pop()
+    
+    def pila_vacia(self):
+        return len(self.__elementos) == 0
 
+    def tamanio(self):
+        return len(self.__elementos)
 
-
-
-pila = Pila()
-
-
-pila.push(5)
-pila.push(3)
-pila.push(2)
-pila.push(8)
-
-
-print (pila.elementos)
-
-
-
-
+    def elemento_cima(self):
+        return self.__elementos[-1]
