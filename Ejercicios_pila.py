@@ -200,3 +200,58 @@ while (not pila.pila_vacia()):
 
 # print(pila.desapilar()[1])          # Lo que va dentro del corchete es el contenido de la lista en esa posición
 
+#Ejercicio 17
+
+from pila import Pila
+
+
+pila_vocales = Pila()
+pila_consonantes = Pila()
+pila_simbolos = Pila()
+
+vocales = ['a', 'e', 'i', 'o', 'u']
+
+print ('Ingrese un parrafo que finalice en un punto: ')
+parrafo = input()
+
+for caracter in parrafo:
+    if(caracter.lower() in vocales):
+        pila_vocales.apilar(caracter)
+    elif(ord(caracter.lower()) > 97 and ord(caracter.lower()) <= 122):
+        pila_consonantes.apilar(caracter)
+    else:
+        pila_simbolos.apilar(caracter)
+
+ #! Punto A   
+print('Cantidad de vocales', pila_vocales.tamanio())
+print('Cantidad de consonantes', pila_consonantes.tamanio())
+print('Cantidad de simbolos', pila_simbolos.tamanio())
+
+
+
+cantidad_numeros = 0
+cantidad_blancos = 0
+
+#! Punto E
+print('cantidad de vocales y simbolos son iguales ?', pila_vocales.tamanio() == pila_simbolos.tamanio())
+
+while(not pila_simbolos.pila_vacia()):
+    letra = pila_simbolos.desapilar()
+    if(letra == ' '):
+        cantidad_blancos += 1
+    elif(ord(letra) >= 48 and ord(letra) <= 57):
+        cantidad_numeros += 1
+        #break
+
+
+#! Punto B y D
+print('Cantidad de espacios en blanco: ', cantidad_blancos)
+print('Cantidad de numeros: ', cantidad_numeros)
+
+#Punto F letra z
+
+while(not pila_consonantes.pila_vacia()):
+    letra = pila_consonantes.desapilar()
+    if(letra.lower() == 'z'):
+        print ('Hay una z')
+        #break
