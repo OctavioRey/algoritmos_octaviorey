@@ -119,3 +119,6 @@ print ('ekisde')
 #     dato = datos_cola.mover_final()
 #     print(dato)
 #     cantidad_elemento =+ 1
+
+
+print ('jaja re loco')
