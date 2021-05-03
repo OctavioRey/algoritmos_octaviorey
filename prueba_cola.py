@@ -87,37 +87,38 @@ from random import randint
 
 # Ejercicio 4
 
-# def es_primo(num):
-#     for n in range(2, num):
-#         if num % n == 0:
-#             return False
-#     return True
+def es_primo(num):
+    for n in range(2, num):
+        if num % n == 0:
+            return False
+    return True
 
 
-# datos_cola = Cola()
+datos_cola = Cola()
 
-# for i in range (0, 10):
-#     num = randint(0, 100)
-#     datos_cola.arribo(num)
-#     print(num)
+for i in range (0, 10):
+    num = randint(0, 100)
+    datos_cola.arribo(num)
+    print(num)
 
-# print ()
+print ()
 
-# i = 0 
-# cantidad_elemento = datos_cola.tamanio()
-
-
-# while(i < cantidad_elemento):
-#     numero = datos_cola.atencion()
-#     if(es_primo(numero)):
-#         datos_cola.arribo(numero)
-#     i += 1
-# cantidad_elemento = 0
+i = 0 
+cantidad_elemento = datos_cola.tamanio()
 
 
+while(i < cantidad_elemento):
+    numero = datos_cola.atencion()
+    if(es_primo(numero)):
+        datos_cola.arribo(numero)
+    i += 1
 
-# while(cantidad_elemento < datos_cola.tamanio()):
-#     dato = datos_cola.mover_final()
-#     print(dato)
-#     cantidad_elemento += 1
+cantidad_elemento = 0
+
+
+
+while(cantidad_elemento > datos_cola.tamanio()):
+    dato = datos_cola.mover_final()
+    print(dato)
+    cantidad_elemento += 1
 

@@ -17,7 +17,6 @@ prueba (num1, num2, cadena, datos)
 print (num1, num2, cadena)
 print (datos)
 
-
 num1 = 1
 num2 = num1
 num2 = num2 + 3
