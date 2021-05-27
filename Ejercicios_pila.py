@@ -123,25 +123,25 @@ else:
 # numeros = [0, 3, 1, 7, 5, 10]
 
 
-# for i in range(0, 6):
-#     numero = numeros[i]
-#     if(pila_datos.pila_vacia()):
-#         pila_datos.apilar(numero)
-#     else:
-#         if(numero >= pila_datos.elemento_cima()):
-#             pila_datos.apilar(numero)
-#         else:
-#             while(not pila_datos.pila_vacia() and pila_datos.elemento_cima() > numero):
-#                 pila_aux.apilar(pila_datos.desapilar())
+for i in range(0, 6):
+    numero = numeros[i]
+    if(pila_datos.pila_vacia()):
+        pila_datos.apilar(numero)
+    else:
+        if(numero >= pila_datos.elemento_cima()):
+            pila_datos.apilar(numero)
+        else:
+            while(not pila_datos.pila_vacia() and pila_datos.elemento_cima() > numero):
+                pila_aux.apilar(pila_datos.desapilar())
 
-#             pila_datos.apilar(numero)
+            pila_datos.apilar(numero)
 
-#             while(not pila_aux.pila_vacia()):
-#                 pila_datos.apilar(pila_aux.desapilar())
+            while(not pila_aux.pila_vacia()):
+                pila_datos.apilar(pila_aux.desapilar())
 
 
-# while (not pila_datos.pila_vacia()):
-#     print (pila_datos.desapilar())
+while (not pila_datos.pila_vacia()):
+    print (pila_datos.desapilar())
 
 #! Ejercicio 13        Falta Terminarlo
 
@@ -255,3 +255,6 @@ while(not pila_consonantes.pila_vacia()):
     if(letra.lower() == 'z'):
         print ('Hay una z')
         #break
+
+
+
