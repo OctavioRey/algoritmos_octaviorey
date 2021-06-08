@@ -117,8 +117,10 @@ cantidad_elemento = 0
 
 
 
-while(cantidad_elemento > datos_cola.tamanio()):
+while(cantidad_elemento < datos_cola.tamanio()):
     dato = datos_cola.mover_final()
     print(dato)
     cantidad_elemento += 1
+    
+
 
