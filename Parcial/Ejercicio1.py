@@ -26,6 +26,5 @@ def buscar_yoda(vector, pos):                           #Punto B
         return pos
     else:
         return buscar_yoda(vector, pos+1)
-    
-    
+   
 print ("Yoda esta en la posicion: ", buscar_yoda(vector_prueba, 0))
