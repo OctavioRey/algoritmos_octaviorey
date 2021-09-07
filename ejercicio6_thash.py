@@ -32,7 +32,7 @@ for i in range(2000):
         tabla_numero[pos_numero] = Lista()
     tabla_numero[pos_numero].insertar(stormtrooper, 'legion')
 
-
+# punto B
 stormtrooper = {'legion': 'FN', 'codigo': 2187}
 pos_legion = hash_legion('FN', len(tabla_legion))
 tabla_legion[pos_legion].insertar(stormtrooper, 'codigo')
@@ -41,6 +41,8 @@ stormtrooper = {'legion': 'FN', 'codigo': 2781}
 pos_numero = hash_numero(2781, len(tabla_numero))
 tabla_numero[pos_numero].insertar(stormtrooper, 'legion')
 
+
+# punto C
 pos_legion = hash_legion(stormtrooper['legion'], len(tabla_legion))
 if(tabla_legion[pos_legion]):
     pos = tabla_legion[pos_legion].busqueda(2187, 'codigo')
